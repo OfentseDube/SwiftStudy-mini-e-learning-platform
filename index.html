@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftStudy - E-Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>SwiftStudy</h1>
+            </div>
+            <div class="nav-menu">
+                <button id="loginBtn" class="btn-secondary">Login</button>
+                <button id="signupBtn" class="btn-primary">Sign Up</button>
+                <div id="userSection" class="user-section" style="display: none;">
+                    <span id="userName" class="user-name"></span>
+                    <button id="logoutBtn" class="btn-secondary">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Learn at Your Own Pace</h2>
+            <p>Master new skills with our curated courses</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Home Page - Course List -->
+        <section id="homePage" class="page active">
+            <h2 class="section-title">Available Courses</h2>
+            <div id="courseList" class="course-grid">
+                <!-- Courses will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Course Detail Page -->
+        <section id="courseDetailPage" class="page">
+            <button id="backBtn" class="btn-back">← Back to Courses</button>
+            <div id="courseDetail" class="course-detail">
+                <!-- Course details will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+            <p class="modal-footer">Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <button type="submit" class="btn-primary">Sign Up</button>
+            </form>
+            <p class="modal-footer">Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 SwiftStudy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
